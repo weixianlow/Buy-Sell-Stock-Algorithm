@@ -41,13 +41,17 @@ int main(int argc, char** argv) {
     
     int i;
     
-    int numberOfDays = argv[1];
-    int r = argv[2];
+    int numberOfDays = atoi(argv[1]);
+    int r = atoi(argv[2]);
     
-    for (i=0;i<v.size;i++)
-    {
-        printf("\nReading value at index %d: %d", i, v.data[i]-48);
+    if(v.size != numberOfDays){
+        exit(INCORRECT_NUMBER_OF_DAYS_INPUTTED);
     }
+    
+//    for (i=0;i<v.size;i++)
+//    {
+//        printf("\nReading value at index %d: %d", i, v.data[i]-48);
+//    }
     
     stockBuySell(&v, numberOfDays, r);
     free_vector(&v);
@@ -60,7 +64,9 @@ void parsing(struct vector* v, char* fileInput){
     FILE* fp = fopen(fileInput, "r");
     char c;
     int input;
-    struct vector_value value;
+    int count;
+   
+//    struct vector_value value;
     
     if(!fp ){
         exit(FILE_FAILED_TO_OPEN);
@@ -68,22 +74,57 @@ void parsing(struct vector* v, char* fileInput){
     
     init_vector(v);
     
-    while( (c=getc(fp))!= EOF){
-        if(c == '\n'){
-            input = get_value_and_clear_vector(&value);
-            insert_element_vector(v, input);
-            printf("Added: %c\n", input);
-            
-            continue;
-        }
-        if(isdigit(c)){
-            insert_element_vector_value(&value, c);
-        }else{
-            free_vector(v);
-            exit(PARSING_ERROR_INVALID_CHARACTER_ENCOUNTERED);
-        }
+//    while( (c=getc(fp))!= EOF){
+//        if(c == '\n'){
+//            input = get_value_and_clear_vector(&value);
+//            insert_element_vector(v, input);
+//            printf("Added: %c\n", input);
+//            
+//            continue;
+//        }
+//        if(isdigit(c)){
+//            insert_element_vector_value(&value, c);
+//        }else{
+//            free_vector(v);
+//            exit(PARSING_ERROR_INVALID_CHARACTER_ENCOUNTERED);
+//        }
+//        
+//    }
+    
+//    if(feof(fp)){
+//       fclose(fp);
+//        free_vector(v);
+//        exit(PARSING_ERROR_EMPTY_FILE);
+//    }
+    
+    while(!feof(fp)){
+        //count++;
         
+        
+    if(!fscanf(fp, "%d\n", &input)){
+        fclose(fp);
+        free_vector(v);
+        exit(PARSING_ERROR_INVALID_CHARACTER_ENCOUNTERED);
     }
+    else{
+        insert_element_vector(v, input);
+        //printf("Added: %d\n", input);
+    }
+    
+    
+    }
+    
+    if((*v).size == 0){
+        fclose(fp);
+        free_vector(v);
+        exit(PARSING_ERROR_EMPTY_FILE);
+    }
+    
+//    if(count == 0){
+//        fclose(fp);
+//        free_vector(v);
+//        exit(PARSING_ERROR_EMPTY_FILE);
+//    }
 }
 
 void stockBuySell(struct vector* v, int number_days, int r)
@@ -162,9 +203,10 @@ void stockBuySell(struct vector* v, int number_days, int r)
     }
     else
     {
+        //printf("\n");
        for (int i = 0; i < count; i++){
-          printf("%d\n", sol[i].toBuy);
-          printf("%d\n", sol[i].toSell);
+          printf("%d\n", sol[i].toBuy+1);
+          printf("%d\n", sol[i].toSell+1);
        }
     }
 

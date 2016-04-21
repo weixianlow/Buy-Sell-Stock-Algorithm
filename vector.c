@@ -24,33 +24,24 @@ void insert_element_vector(struct vector* v, int element_to_insert)
 	v->data[v->size] = element_to_insert;
 	v->size += 1;
 }
-void insert_element_vector_value(struct vector_value* v, char element_to_insert)
-{
-	if(v->capacity == v->size)
-	{
-		v->data = realloc(v->data, sizeof(char) * v->capacity * 2);
-		v->capacity *= 2;
-	}
-	v->data[v->size] = element_to_insert;
-	v->size += 1;
-}
+
 
 int* vector_get_ptr(struct vector* v)
 {
 	return v->data;
 }
 
-int get_value_and_clear_vector(struct vector_value* v) {
-	int value;
-
-	v->data[v->size] = '\0';
-	value = atoi(v->data);
-
-	memset(v->data, '\0', v->size*sizeof(char));
-	v->size = 0;
-
-	return value;
-}
+//int get_value_and_clear_vector(struct vector_value* v) {
+//	int value;
+//
+//	v->data[v->size] = '\0';
+//	value = atoi(v->data);
+//
+//	memset(v->data, '\0', v->size*sizeof(char));
+//	v->size = 0;
+//
+//	return value;
+//}
 
 void free_vector(struct vector* v)
 {
