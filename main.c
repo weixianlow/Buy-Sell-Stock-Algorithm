@@ -160,53 +160,51 @@ void stockBuySell(struct vector* v, int number_days, int r)
         
     }else{
         
-    int count = 0; // count of solution pairs
+    int count = 0; 
 
     // solution vector
-    buySellSet sol[number_days/2 + 1];
+    buySellSet product[number_days/2 + 1];
 
-    // Traverse through given price array
+    
     int i = 0;
     while (i < number_days-1)
     {
-        // Find Local Minima. Note that the limit is (n-2) as we are
-        // comparing present element to the next element. 
+        
         while ((i < number_days-1) && (access_element_vector(v, i+1) <= access_element_vector(v, i))){
             i++;
         }
 
-        // If we reached the end, break as no further solution possible
+   
         if (i == number_days-1)
         {
             break;
         }
-        // Store the index of minima
-        sol[count].toBuy = i++;
+      
+        product[count].toBuy = i++;
 
-        // Find Local Maxima.  Note that the limit is (n-1) as we are
-        // comparing to previous element
+
         while ((i < number_days) && (access_element_vector(v, i) >= access_element_vector(v, i-1))){
            i++; 
         }
             
 
-        // Store the index of maxima
-        sol[count].toSell = i-1;
+     
+        product[count].toSell = i-1;
 
-        // Increment count of buy/sell pairs
+        
         count++;
     }
 
-    // print solution
+
     if (count == 0){
         return;
     }
     else
     {
-        //printf("\n");
+   
        for (int i = 0; i < count; i++){
-          printf("%d\n", sol[i].toBuy+1);
-          printf("%d\n", sol[i].toSell+1);
+          printf("%d\n", product[i].toBuy+1);
+          printf("%d\n", product[i].toSell+1);
        }
     }
 
