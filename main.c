@@ -29,7 +29,7 @@ void stockBuySell(int* prices, int number_days, int r);
 void stockBuySell2(int* prices, int);
 void findGlobalParent(int* globalDirection[], int* localDirection[], int[], int[], int counter, int i, int j, int* code );
 void findLocalParent(int* globalDirection[], int* localDirection[], int[], int[], int counter, int i, int j, int* code);
-
+void freeDirectionArray(int* globalDirection[], int* localDirection[], int numberOfDays);
 
 /*
  * 
@@ -222,6 +222,8 @@ void stockBuySell(int* array, int number_days, int r)
         }
     }
     
+    freeDirectionArray(globalDirection, localDirection, days);
+    
     //printf("\nProfit is %d", global[days-1][r]);
     
     
@@ -277,3 +279,14 @@ void findLocalParent(int* globalDirection[], int* localDirection[], int buy[], i
     }
 }
 
+void freeDirectionArray(int* globalDirection[], int* localDirection[], int numberOfDays){
+    int i=0;
+    
+    
+    for(i=0;i<numberOfDays;i++){
+        
+            free(globalDirection[i]);
+            free(localDirection[i]);
+        
+    }
+}
