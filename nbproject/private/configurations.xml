@@ -13,8 +13,6 @@
         <gdb_interceptlist>
           <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
         </gdb_interceptlist>
-        <gdb_signals>
-        </gdb_signals>
         <gdb_options>
           <DebugOptions>
           </DebugOptions>
@@ -26,8 +24,6 @@
       </nativedebugger>
       <runprofile version="9">
         <runcommandpicklist>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" 4 2 "input.txt"</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" 5 2 "input.txt"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" 6 1 "input.txt"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" 8 1 "input.txt"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" 8 2 "input.txt"</runcommandpicklistitem>
@@ -36,8 +32,10 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" 6 3 "input.txt"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" 6 2 "input.txt"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" 7 2 "input.txt"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" 7 5 "input.txt"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" 7 9 "input.txt"</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" 7 2 "input.txt"</runcommand>
+        <runcommand>"${OUTPUT_PATH}" 7 9 "input.txt"</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
