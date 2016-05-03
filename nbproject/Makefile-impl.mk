@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=CS3050 Final Project
+PROJECTNAME=wlkr7_zj5ff_dek8v5_cs3050FinalProject
 
 # Active Configuration
 DEFAULTCONF=Debug

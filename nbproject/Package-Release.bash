@@ -13,9 +13,9 @@ CND_BUILDDIR=build
 CND_DLIB_EXT=dylib
 NBTMPDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cs3050_final_project
-OUTPUT_BASENAME=cs3050_final_project
-PACKAGE_TOP_DIR=cs3050finalproject/
+OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/wlkr7_zj5ff_dek8v5_cs3050finalproject
+OUTPUT_BASENAME=wlkr7_zj5ff_dek8v5_cs3050finalproject
+PACKAGE_TOP_DIR=wlkr7zj5ffdek8v5cs3050finalproject/
 
 # Functions
 function checkReturnCode
@@ -60,15 +60,15 @@ mkdir -p ${NBTMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory "${NBTMPDIR}/cs3050finalproject/bin"
+makeDirectory "${NBTMPDIR}/wlkr7zj5ffdek8v5cs3050finalproject/bin"
 copyFileToTmpDir "${OUTPUT_PATH}" "${NBTMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/cs3050finalproject.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/wlkr7zj5ffdek8v5cs3050finalproject.tar
 cd ${NBTMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/cs3050finalproject.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/package/wlkr7zj5ffdek8v5cs3050finalproject.tar *
 checkReturnCode
 
 # Cleanup

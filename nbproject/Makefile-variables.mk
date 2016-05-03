@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-MacOSX
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-MacOSX
-CND_ARTIFACT_NAME_Debug=cs3050_final_project
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/cs3050_final_project
+CND_ARTIFACT_NAME_Debug=wlkr7_zj5ff_dek8v5_cs3050finalproject
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/wlkr7_zj5ff_dek8v5_cs3050finalproject
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-MacOSX/package
-CND_PACKAGE_NAME_Debug=cs3050finalproject.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/cs3050finalproject.tar
+CND_PACKAGE_NAME_Debug=wlkr7zj5ffdek8v5cs3050finalproject.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/wlkr7zj5ffdek8v5cs3050finalproject.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-MacOSX
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-MacOSX
-CND_ARTIFACT_NAME_Release=cs3050_final_project
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/cs3050_final_project
+CND_ARTIFACT_NAME_Release=wlkr7_zj5ff_dek8v5_cs3050finalproject
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/wlkr7_zj5ff_dek8v5_cs3050finalproject
 CND_PACKAGE_DIR_Release=dist/Release/GNU-MacOSX/package
-CND_PACKAGE_NAME_Release=cs3050finalproject.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/cs3050finalproject.tar
+CND_PACKAGE_NAME_Release=wlkr7zj5ffdek8v5cs3050finalproject.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/wlkr7zj5ffdek8v5cs3050finalproject.tar
 #
 # include compiler specific variables
 #
